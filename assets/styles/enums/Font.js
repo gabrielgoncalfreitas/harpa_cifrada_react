@@ -1,3 +1,0 @@
-const Font = {
-    family: 'Roboto'
-};

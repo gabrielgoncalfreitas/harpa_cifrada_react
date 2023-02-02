@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Appbar, Divider, Menu, Tooltip } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
 
-export default function AppBar() {
+import { FontEnum } from '../../assets/styles/enums/FontEnum';
+
+import { Routes } from '../../Routes';
+
+export default function HomeTemplateAppBarComponent() {
     const [visible, setVisible] = useState(false);
+    const navigation = useNavigation();
 
     function openMenu() {
         return setVisible(true);
@@ -15,7 +21,7 @@ export default function AppBar() {
 
     return (
         <Appbar.Header style={{ backgroundColor: FontEnum.backgroundColor }}>
-            <View style={[styles.center, { marginLeft: 5 }]}>
+            <View style={styles.center} marginLeft={5}>
                 <Appbar.Content
                     title='Harpa Cifrada'
                     titleStyle={{
@@ -29,12 +35,12 @@ export default function AppBar() {
                 <Appbar.Action
                     icon='magnify'
                     iconColor={FontEnum.white}
-                    onPress={() => { }} />
+                    onPress={() => navigation.navigate(Routes.search.name)} />
 
                 <Appbar.Action
                     icon='heart'
                     iconColor={FontEnum.white}
-                    onPress={() => { }} />
+                    onPress={() => navigation.navigate(Routes.favorites.name)} />
 
                 <Menu
                     visible={visible}
@@ -56,11 +62,6 @@ export default function AppBar() {
             </View>
         </Appbar.Header>
     );
-};
-
-const FontEnum = {
-    backgroundColor: '#1554F6',
-    white: '#fff'
 };
 
 const styles = StyleSheet.create({

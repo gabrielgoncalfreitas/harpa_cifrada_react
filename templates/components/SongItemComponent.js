@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Text, View } from 'react-native';
 import { IconButton } from 'react-native-paper';
 
-export default function Song(props) {
+export default function SongItemComponent(props) {
     const [favoriteIcon, setFavoriteIcon] = useState('star-outline');
     const [favorite, setFavorite] = useState(false);
 
