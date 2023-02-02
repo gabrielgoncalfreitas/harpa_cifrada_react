@@ -1,13 +1,12 @@
 import React from 'react';
 import { Provider } from 'react-native-paper';
-
-import HomeTemplateAppBarComponent from './components/HomeTemplateAppBarComponent';
 import SongListComponent from './components/SongListComponent';
+import HomeAppBarComponent from './components/HomeAppBarComponent';
 
-export default function HomeTemplate() {
+export default function HomeView() {
     return (
         <Provider>
-            <HomeTemplateAppBarComponent />
+            <HomeAppBarComponent />
             <SongListComponent />
         </Provider>
     );

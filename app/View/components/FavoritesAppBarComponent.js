@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-import { Appbar, Searchbar } from 'react-native-paper';
+import React from 'react';
+import { Routes } from '../../../Routes';
+import { Appbar } from 'react-native-paper';
+import { FontEnum } from '../../enums/FontEnum';
 import { useNavigation } from '@react-navigation/native';
 
-import { Routes } from '../../Routes';
-import { FontEnum } from '../../assets/styles/enums/FontEnum';
-
-export default function FavoritesTemplateAppBarComponent() {
+export default function FavoritesAppBarComponent() {
     const navigation = useNavigation();
 
     return (

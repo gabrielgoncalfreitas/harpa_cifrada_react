@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
+import { Routes } from '../../../Routes';
 import { Appbar, Searchbar } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
+import { FontEnum } from '../../enums/FontEnum';
 
-import { Routes } from '../../Routes';
-import { FontEnum } from '../../assets/styles/enums/FontEnum';
-
-export default function SearchTemplateAppBarComponent() {
+export default function SearchAppBarComponent() {
     const [searchQuery, setSearchQuery] = useState('');
-
     const onChangeSearch = query => setSearchQuery(query);
     const navigation = useNavigation();
 

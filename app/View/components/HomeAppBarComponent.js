@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
+import { Routes } from '../../../Routes';
 import { StyleSheet, View } from 'react-native';
-import { Appbar, Divider, Menu, Tooltip } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
+import { FontEnum } from '../../enums/FontEnum';
+import { Appbar, Divider, Menu, Tooltip } from 'react-native-paper';
 
-import { FontEnum } from '../../assets/styles/enums/FontEnum';
-
-import { Routes } from '../../Routes';
-
-export default function HomeTemplateAppBarComponent() {
+export default function HomeAppBarComponent() {
     const [visible, setVisible] = useState(false);
     const navigation = useNavigation();
 

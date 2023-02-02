@@ -1,18 +1,18 @@
-import FavoritesTemplate from "./templates/FavoritesTemplate";
-import HomeTemplate from "./templates/HomeTemplate";
-import SearchTemplate from "./templates/SearchTemplate";
+import HomeView from "./app/View/HomeView";
+import SearchView from "./app/View/SearchView";
+import FavoritesView from "./app/View/FavoritesView";
 
 export const Routes = {
     home: {
         name: 'Home',
-        component: HomeTemplate
+        component: HomeView
     },
     search: {
         name: 'Search',
-        component: SearchTemplate
+        component: SearchView
     },
     favorites: {
         name: 'Favorites',
-        component: FavoritesTemplate
+        component: FavoritesView
     }
 };
