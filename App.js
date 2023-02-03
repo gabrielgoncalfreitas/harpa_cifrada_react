@@ -6,6 +6,7 @@ import { ViewRoutes } from './app/Routes/ViewRoutes';
 const Stack = createNativeStackNavigator();
 
 function App() {
+  console.log(ViewRoutes);
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName={ViewRoutes.home.name}>

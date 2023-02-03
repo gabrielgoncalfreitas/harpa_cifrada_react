@@ -1,17 +1,15 @@
-import axios from "axios";
-import { API_URL } from '@env';
+
+import Request from "../Http/Request";
+import { ApiRoutes } from "../Routes/ApiRoutes";
 
 export const SearchController = {
-    get: function () {
-        console.log(API_URL);
-        // axios({
-        //     method: 'GET',
-        //     url: 'http://localhost:8000/api/get',
-        //     responseType: 'stream',
-        // }).then(function (response) {
-        //     console.log(response.data);
-        // });
-
+    get: async function () {
+        const response = await Request.get({
+            url: ApiRoutes.helloWorld,
+            method: 'GET',
+            data: null
+        });
+        console.log(response);
         return 0;
     }
 };

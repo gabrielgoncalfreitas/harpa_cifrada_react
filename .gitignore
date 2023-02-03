@@ -10,4 +10,4 @@ npm-debug.*
 *.orig.*
 web-build/
 package-lock.json
-.env
+env.js

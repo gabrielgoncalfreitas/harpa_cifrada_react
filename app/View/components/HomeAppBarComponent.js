@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Routes } from '../../Routes/ViewRoutes';
 import { StyleSheet, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { FontEnum } from '../../enums/FontEnum';
 import { Appbar, Divider, Menu, Tooltip } from 'react-native-paper';
+import { ViewRoutes } from '../../Routes/ViewRoutes';
 
 export default function HomeAppBarComponent() {
     const [visible, setVisible] = useState(false);
@@ -33,12 +33,12 @@ export default function HomeAppBarComponent() {
                 <Appbar.Action
                     icon='magnify'
                     iconColor={FontEnum.white}
-                    onPress={() => navigation.navigate(Routes.search.name)} />
+                    onPress={() => navigation.navigate(ViewRoutes.search.name)} />
 
                 <Appbar.Action
                     icon='heart'
                     iconColor={FontEnum.white}
-                    onPress={() => navigation.navigate(Routes.favorites.name)} />
+                    onPress={() => navigation.navigate(ViewRoutes.favorites.name)} />
 
                 <Menu
                     visible={visible}
