@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Routes } from '../../../Routes';
+import { FontEnum } from '../../enums/FontEnum';
+import { ViewRoutes } from '../../Routes/ViewRoutes';
 import { Appbar, Searchbar } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
-import { FontEnum } from '../../enums/FontEnum';
 
 export default function SearchAppBarComponent() {
     const [searchQuery, setSearchQuery] = useState('');
@@ -11,7 +11,7 @@ export default function SearchAppBarComponent() {
 
     return (
         <Appbar.Header style={{ backgroundColor: FontEnum.backgroundColor }}>
-            <Appbar.BackAction color='#fff' onPress={() => navigation.navigate(Routes.home.name)} style={{ minWidth: '10%' }} />
+            <Appbar.BackAction color='#fff' onPress={() => navigation.navigate(ViewRoutes.home.name)} style={{ minWidth: '10%' }} />
             <Searchbar
                 placeholder="Procurar"
                 onChangeText={onChangeSearch}

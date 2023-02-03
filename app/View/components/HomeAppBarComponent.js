@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Routes } from '../../../Routes';
+import { Routes } from '../../Routes/ViewRoutes';
 import { StyleSheet, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { FontEnum } from '../../enums/FontEnum';

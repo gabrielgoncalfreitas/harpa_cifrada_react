@@ -1,8 +1,8 @@
-import HomeView from "./app/View/HomeView";
-import SearchView from "./app/View/SearchView";
-import FavoritesView from "./app/View/FavoritesView";
+import HomeView from "../View/HomeView";
+import SearchView from "../View/SearchView";
+import FavoritesView from "../View/FavoritesView";
 
-export const Routes = {
+export const ViewRoutes = {
     home: {
         name: 'Home',
         component: HomeView

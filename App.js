@@ -1,26 +1,25 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-import { Routes } from './Routes';
+import { ViewRoutes } from './app/Routes/ViewRoutes';
 
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={Routes.home.name}>
+      <Stack.Navigator initialRouteName={ViewRoutes.home.name}>
 
-        <Stack.Screen name={Routes.home.name} component={Routes.home.component} options={{
+        <Stack.Screen name={ViewRoutes.home.name} component={ViewRoutes.home.component} options={{
           headerShown: false
         }} />
 
-        <Stack.Screen name={Routes.search.name} component={Routes.search.component} options={{
+        <Stack.Screen name={ViewRoutes.search.name} component={ViewRoutes.search.component} options={{
           headerShown: false,
           animation: 'slide_from_right'
         }} />
 
-        <Stack.Screen name={Routes.favorites.name} component={Routes.favorites.component} options={{
+        <Stack.Screen name={ViewRoutes.favorites.name} component={ViewRoutes.favorites.component} options={{
           headerShown: false,
           animation: 'slide_from_right'
         }} />
